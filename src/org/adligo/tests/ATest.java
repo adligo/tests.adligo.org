@@ -35,9 +35,11 @@ public class ATest extends TestCase {
   private boolean bLastTestFinished = false;
   private boolean bLastOne = false;
   String sError = null;
+  String sTestName;
 
   public ATest(String s) {
     super(s.substring(s.lastIndexOf(".") + 1 ,s.length()));
+    sTestName = s;
   }
 
   /* call this at the end of each test method that you call!
@@ -90,9 +92,14 @@ public class ATest extends TestCase {
   }
 
 
+  public void logStart() {
+    log.warn("test " + sTestName + " is starting");
+  }
+  
   public void setLastTestFinished() {
     bLastOne = true;
     bLastTestFinished = true;
+    log.warn("test " + sTestName + " is finished");
   }
 
   public void setError(String s) {
