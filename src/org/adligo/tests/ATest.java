@@ -17,7 +17,7 @@ import junit.framework.TestCase;
  *               were relying on the fact that you were going to light up your threads inside the
  *               test, but what if the code you are testing lights up the threads?
  *               So here we are go ATest go
- *               
+ *
  *
  * Copyright:    Copyright (c) 2002
  * Company:
@@ -26,6 +26,7 @@ import junit.framework.TestCase;
  */
 
 import org.apache.commons.logging.*;
+import org.adligo.i.tests.I_RunnableTest;
 
 import junit.framework.*;
 
@@ -38,7 +39,9 @@ public class ATest extends TestCase {
     super(s);
   }
 
-  /* call this at the end of each test method that you call! */
+  /* call this at the end of each test method that you call!
+   * if you are useing a events style test
+  */
   public void waiter() {
     while (!bLastTestFinished || bLastOne) {
       try {
@@ -50,6 +53,38 @@ public class ATest extends TestCase {
       } catch (Exception x) {}
     }
   }
+
+  public void runTests(I_RunnableTest [] tests) {
+    for (int i = 0; i < tests.length; i++) {
+      new Thread(tests[i]).run();
+    }
+    while (!areTheyAllDone(tests)) {
+      if (log.isInfoEnabled()) {
+        log.info("*WAITING For " + super.getName() + " Events to finish ");
+      }
+      bLastOne = false;
+      try {
+        Thread.sleep(500);
+      } catch (Exception x) { x.printStackTrace(); }
+    }
+    for (int i = 0; i < tests.length; i++) {
+      if (tests[i].getError() != null) {
+        this.setError(tests[i].getError());
+      }
+    }
+
+  }
+
+  private boolean areTheyAllDone(I_RunnableTest [] tests) {
+    for (int i = 0; i < tests.length; i++) {
+      if (!tests[i].isFinished()) {
+        return false;
+      }
+    }
+    return true;
+
+  }
+
 
   public void setLastTestFinished() {
     bLastOne = true;
