@@ -99,4 +99,18 @@ public class ATest extends TestCase {
     sError = s;
     setLastTestFinished();
   }
+
+  /**
+   * checks to see if the int pi is in the int array iTestOne
+   * also returns true if iTestOne contains a -1
+   */
+  public static boolean testThis(int [] iTestOne, int pi) {
+    for (int i = 0; i < iTestOne.length; i++) {
+      if (iTestOne[i] == -1 || iTestOne[i] == pi) {
+        return true;
+      }
+    }
+    return false;
+
+  }
 }
