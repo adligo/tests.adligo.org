@@ -1,6 +1,5 @@
 package org.adligo.tests;
 
-import junit.framework.TestCase;
 
 /**
  * Title:
@@ -26,6 +25,7 @@ import junit.framework.TestCase;
  */
 
 import org.apache.commons.logging.*;
+import junit.framework.TestCase;
 import org.adligo.i.tests.I_RunnableTest;
 
 import junit.framework.*;
