@@ -16,11 +16,11 @@ public class Suite {
   public Suite() {
   }
 
-  public static Test suite(String packageName) {
+  public static Test suite(String packageName, int iTests) {
     //BasicConfigurator.configure();
     TestSuite suite= new TestSuite();
     try {
-      for (int i = 0; i < 6; i++) {
+      for (int i = 0; i < iTests; i++) {
         Class c = Class.forName(packageName + "Test" + i);
         Class [] args = new Class[] {String.class};
         Constructor ct = c.getConstructor(args);
