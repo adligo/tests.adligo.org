@@ -37,7 +37,7 @@ public class ATest extends TestCase {
   String sError = null;
 
   public ATest(String s) {
-    super(s);
+    super(s.substring(s.lastIndexOf(".") + 1 ,s.length));
   }
 
   /* call this at the end of each test method that you call!
