@@ -52,7 +52,9 @@ public class ATest extends TestCase {
           log.info("*WAITING For " + super.getName() + " Events to finish ");
         }
         bLastOne = false;
-        Thread.sleep(500);
+        Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+        Thread.yield();
+        Thread.sleep(2000);
       } catch (Exception x) {}
     }
     if (sError != null) {
