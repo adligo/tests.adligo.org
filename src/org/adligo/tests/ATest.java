@@ -34,6 +34,7 @@ public class ATest extends TestCase {
   static Log log = LogFactory.getLog(ATest.class);
   private boolean bLastTestFinished = false;
   private boolean bLastOne = false;
+  private boolean bHasCalledWaiter = false;
   String sError = null;
   String sTestName;
 
@@ -46,6 +47,7 @@ public class ATest extends TestCase {
    * if you are useing a events style test
   */
   public void waiter() {
+    bHasCalledWaiter = true;
     while (!bLastTestFinished || bLastOne) {
       try {
         if (log.isInfoEnabled()) {
@@ -108,6 +110,9 @@ public class ATest extends TestCase {
 
   public void setError(String s) {
     sError = s;
+    if (!bHasCalledWaiter) {
+      super.assertTrue(sError, false);
+    }
     System.out.println("test " + sTestName + ".setError reports \n" + s);
     setLastTestFinished();
   }
