@@ -93,7 +93,7 @@ public class ATest extends TestCase {
 
 
   public void logStart() {
-    log.warn("test " + sTestName + " is starting");
+    log.warn("test " + sTestName + " is starting\n\n\n\n\n");
   }
   
   public void setLastTestFinished() {
