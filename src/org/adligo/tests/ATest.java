@@ -34,6 +34,7 @@ public class ATest extends TestCase {
   static Log log = LogFactory.getLog(ATest.class);
   private boolean bLastTestFinished = false;
   private boolean bLastOne = false;
+  String sError = null;
 
   public ATest(String s) {
     super(s);
@@ -51,6 +52,9 @@ public class ATest extends TestCase {
         bLastOne = false;
         Thread.sleep(500);
       } catch (Exception x) {}
+    }
+    if (sError != null) {
+      super.assertTrue(sError, false);
     }
   }
 
@@ -92,7 +96,7 @@ public class ATest extends TestCase {
   }
 
   public void setError(String s) {
+    sError = s;
     setLastTestFinished();
-    super.assertTrue(s, false);
   }
 }
