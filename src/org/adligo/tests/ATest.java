@@ -78,7 +78,9 @@ public class ATest extends TestCase {
         this.setError(tests[i].getError());
       }
     }
-
+    if (sError != null) {
+      super.assertTrue(sError, false);
+    }
   }
 
   private boolean areTheyAllDone(I_RunnableTest [] tests) {
@@ -104,6 +106,7 @@ public class ATest extends TestCase {
 
   public void setError(String s) {
     sError = s;
+    System.out.println("test " + sTestName + ".setError reports \n" + s);
     setLastTestFinished();
   }
 
