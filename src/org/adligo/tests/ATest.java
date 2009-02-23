@@ -28,7 +28,9 @@ import junit.framework.TestCase;
 
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
+import org.adligo.i.log.client.LogPlatform;
 import org.adligo.i.tests.I_RunnableTest;
+import org.adligo.j2se.util.J2SEPlatform;
 
 
 public class ATest extends TestCase {
@@ -38,7 +40,11 @@ public class ATest extends TestCase {
   private boolean bHasCalledWaiter = false;
   String sError = null;
   String sTestName;
-
+  
+  static {
+		InitJ2SE.init();
+  }
+  
   public ATest(String s) {
     super(s.substring(s.lastIndexOf(".") + 1 ,s.length()));
     sTestName = s;

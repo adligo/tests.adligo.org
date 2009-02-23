@@ -11,8 +11,15 @@ package org.adligo.tests;
 import junit.framework.*;
 import java.lang.reflect.*;
 
+import org.adligo.i.log.client.LogPlatform;
+import org.adligo.j2se.util.J2SEPlatform;
+
 public class Suite {
 
+  static {
+		InitJ2SE.init();
+  }
+	  
   public Suite() {
   }
 
