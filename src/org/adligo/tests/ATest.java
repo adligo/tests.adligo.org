@@ -24,11 +24,12 @@ package org.adligo.tests;
  * @version 1.0
  */
 
-import org.apache.commons.logging.*;
 import junit.framework.TestCase;
+
+import org.adligo.i.log.client.Log;
+import org.adligo.i.log.client.LogFactory;
 import org.adligo.i.tests.I_RunnableTest;
 
-import junit.framework.*;
 
 public class ATest extends TestCase {
   static Log log = LogFactory.getLog(ATest.class);
