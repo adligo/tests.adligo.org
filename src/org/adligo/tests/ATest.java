@@ -28,9 +28,7 @@ import junit.framework.TestCase;
 
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
-import org.adligo.i.log.client.LogPlatform;
 import org.adligo.i.tests.I_RunnableTest;
-import org.adligo.j2se.util.J2SEPlatform;
 
 
 public class ATest extends TestCase {
@@ -43,6 +41,10 @@ public class ATest extends TestCase {
   
   static {
 		InitJ2SE.init();
+  }
+  
+  public ATest() {
+	  super();
   }
   
   public ATest(String s) {
