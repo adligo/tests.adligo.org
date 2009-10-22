@@ -1,0 +1,149 @@
+Buildfile: build.xml
+
+wtf:
+[system_file_separator] in execute it's originally null
+[system_file_separator] java.lang.Exception: tracing call
+[system_file_separator] 	at org.adligo.ant.SystemFileSeparator.loadFile(SystemFileSeparator.java:44)
+[system_file_separator] 	at org.adligo.ant.SystemFileSeparator.execute(SystemFileSeparator.java:207)
+[system_file_separator] 	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:288)
+[system_file_separator] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[system_file_separator] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[system_file_separator] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[system_file_separator] 	at java.lang.reflect.Method.invoke(Method.java:597)
+[system_file_separator] 	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+[system_file_separator] 	at org.apache.tools.ant.Task.perform(Task.java:348)
+[system_file_separator] 	at org.apache.tools.ant.Target.execute(Target.java:357)
+[system_file_separator] 	at org.apache.tools.ant.Target.performTasks(Target.java:385)
+[system_file_separator] 	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1337)
+[system_file_separator] 	at org.apache.tools.ant.Project.executeTarget(Project.java:1306)
+[system_file_separator] 	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+[system_file_separator] 	at org.apache.tools.ant.Project.executeTargets(Project.java:1189)
+[system_file_separator] 	at org.apache.tools.ant.Main.runBuild(Main.java:758)
+[system_file_separator] 	at org.apache.tools.ant.Main.startAnt(Main.java:217)
+[system_file_separator] 	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:257)
+[system_file_separator] 	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:104)
+[system_file_separator] it's originally null
+[system_file_separator] putting user_junit_4_4_5
+[system_file_separator] value C:/eclipse\plugins\org.junit4_4.5.0.v20090824/junit.jar
+[system_file_separator] 
+[system_file_separator] 
+[system_file_separator] it is now C:\eclipse\plugins\org.junit4_4.5.0.v20090824\junit.jar
+[system_file_separator] 
+[system_file_separator] 
+[system_file_separator] it's getting added as C:\eclipse\plugins\org.junit4_4.5.0.v20090824\junit.jar
+[system_file_separator] 
+[system_file_separator] 
+[system_file_separator]  char 0 is 67
+[system_file_separator]  char 1 is 58
+[system_file_separator]  char 2 is 92
+[system_file_separator]  char 3 is 101
+[system_file_separator]  char 4 is 99
+[system_file_separator]  char 5 is 108
+[system_file_separator]  char 6 is 105
+[system_file_separator]  char 7 is 112
+[system_file_separator]  char 8 is 115
+[system_file_separator]  char 9 is 101
+[system_file_separator]  char 10 is 92
+[system_file_separator]  char 11 is 112
+[system_file_separator]  char 12 is 108
+[system_file_separator]  char 13 is 117
+[system_file_separator]  char 14 is 103
+[system_file_separator]  char 15 is 105
+[system_file_separator]  char 16 is 110
+[system_file_separator]  char 17 is 115
+[system_file_separator]  char 18 is 92
+[system_file_separator]  char 19 is 111
+[system_file_separator]  char 20 is 114
+[system_file_separator]  char 21 is 103
+[system_file_separator]  char 22 is 46
+[system_file_separator]  char 23 is 106
+[system_file_separator]  char 24 is 117
+[system_file_separator]  char 25 is 110
+[system_file_separator]  char 26 is 105
+[system_file_separator]  char 27 is 116
+[system_file_separator]  char 28 is 52
+[system_file_separator]  char 29 is 95
+[system_file_separator]  char 30 is 52
+[system_file_separator]  char 31 is 46
+[system_file_separator]  char 32 is 53
+[system_file_separator]  char 33 is 46
+[system_file_separator]  char 34 is 48
+[system_file_separator]  char 35 is 46
+[system_file_separator]  char 36 is 118
+[system_file_separator]  char 37 is 50
+[system_file_separator]  char 38 is 48
+[system_file_separator]  char 39 is 48
+[system_file_separator]  char 40 is 57
+[system_file_separator]  char 41 is 48
+[system_file_separator]  char 42 is 56
+[system_file_separator]  char 43 is 50
+[system_file_separator]  char 44 is 52
+[system_file_separator]  char 45 is 92
+[system_file_separator]  char 46 is 106
+[system_file_separator]  char 47 is 117
+[system_file_separator]  char 48 is 110
+[system_file_separator]  char 49 is 105
+[system_file_separator]  char 50 is 116
+[system_file_separator]  char 51 is 46
+[system_file_separator]  char 52 is 106
+[system_file_separator]  char 53 is 97
+[system_file_separator]  char 54 is 114
+[system_file_separator] it's finally C:\eclipse\plugins\org.junit4_4.5.0.v20090824\junit.jar
+[system_file_separator]  char 0 is 67
+[system_file_separator]  char 1 is 58
+[system_file_separator]  char 2 is 92
+[system_file_separator]  char 3 is 101
+[system_file_separator]  char 4 is 99
+[system_file_separator]  char 5 is 108
+[system_file_separator]  char 6 is 105
+[system_file_separator]  char 7 is 112
+[system_file_separator]  char 8 is 115
+[system_file_separator]  char 9 is 101
+[system_file_separator]  char 10 is 92
+[system_file_separator]  char 11 is 112
+[system_file_separator]  char 12 is 108
+[system_file_separator]  char 13 is 117
+[system_file_separator]  char 14 is 103
+[system_file_separator]  char 15 is 105
+[system_file_separator]  char 16 is 110
+[system_file_separator]  char 17 is 115
+[system_file_separator]  char 18 is 92
+[system_file_separator]  char 19 is 111
+[system_file_separator]  char 20 is 114
+[system_file_separator]  char 21 is 103
+[system_file_separator]  char 22 is 46
+[system_file_separator]  char 23 is 106
+[system_file_separator]  char 24 is 117
+[system_file_separator]  char 25 is 110
+[system_file_separator]  char 26 is 105
+[system_file_separator]  char 27 is 116
+[system_file_separator]  char 28 is 52
+[system_file_separator]  char 29 is 95
+[system_file_separator]  char 30 is 52
+[system_file_separator]  char 31 is 46
+[system_file_separator]  char 32 is 53
+[system_file_separator]  char 33 is 46
+[system_file_separator]  char 34 is 48
+[system_file_separator]  char 35 is 46
+[system_file_separator]  char 36 is 118
+[system_file_separator]  char 37 is 50
+[system_file_separator]  char 38 is 48
+[system_file_separator]  char 39 is 48
+[system_file_separator]  char 40 is 57
+[system_file_separator]  char 41 is 48
+[system_file_separator]  char 42 is 56
+[system_file_separator]  char 43 is 50
+[system_file_separator]  char 44 is 52
+[system_file_separator]  char 45 is 92
+[system_file_separator]  char 46 is 106
+[system_file_separator]  char 47 is 117
+[system_file_separator]  char 48 is 110
+[system_file_separator]  char 49 is 105
+[system_file_separator]  char 50 is 116
+[system_file_separator]  char 51 is 46
+[system_file_separator]  char 52 is 106
+[system_file_separator]  char 53 is 97
+[system_file_separator]  char 54 is 114
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
