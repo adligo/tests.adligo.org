@@ -8,11 +8,11 @@ package org.adligo.tests;
  * @author
  * @version 1.0
  */
-import junit.framework.*;
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
 
-import org.adligo.i.log.client.LogPlatform;
-import org.adligo.j2se.util.J2SEPlatform;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 public class Suite {
 
@@ -23,7 +23,8 @@ public class Suite {
   public Suite() {
   }
 
-  public static Test suite(String packageName, int iTests) {
+  @SuppressWarnings("unchecked")
+public static Test suite(String packageName, int iTests) {
     //BasicConfigurator.configure();
     TestSuite suite= new TestSuite();
     try {
