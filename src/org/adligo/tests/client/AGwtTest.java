@@ -8,4 +8,11 @@ public abstract class AGwtTest extends GWTTestCase {
 		super();
 	}
 
+	@Override
+	protected void gwtSetUp() throws Exception {
+		// TODO Auto-generated method stub
+		super.gwtSetUp();
+		InitGwt.init();
+	}
+
 }
