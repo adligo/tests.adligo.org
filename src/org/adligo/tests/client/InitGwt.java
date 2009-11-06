@@ -1,4 +1,4 @@
-package org.adligo.tests;
+package org.adligo.tests.client;
 
 import org.adligo.gwt.util.client.GwtPlatform;
 import org.adligo.i.log.client.LogPlatform;

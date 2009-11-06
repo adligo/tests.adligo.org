@@ -1,4 +1,4 @@
-package org.adligo.tests;
+package org.adligo.tests.client;
 
 import com.google.gwt.junit.client.GWTTestCase;
 
