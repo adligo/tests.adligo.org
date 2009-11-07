@@ -1,6 +1,10 @@
 package org.adligo.tests.client;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.adligo.gwt.util.client.GwtPlatform;
+import org.adligo.gwt.util.client.GwtPropertyFactory;
 import org.adligo.i.log.client.LogPlatform;
 
 public class InitGwt {
@@ -9,8 +13,12 @@ public class InitGwt {
 	  public static synchronized void init(){
 		  if (!init) {
 			try {
-				GwtPlatform.init();
+				List<Class<?>> ommit = new ArrayList<Class<?>>();
+				ommit.add(GwtPropertyFactory.class);
+				GwtPlatform.init(ommit);
+				GwtTestPropertyFactory.init();
 				LogPlatform.init();
+				
 			} catch (Exception x) {
 				x.printStackTrace();
 			}

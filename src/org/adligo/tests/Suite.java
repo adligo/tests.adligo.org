@@ -32,7 +32,7 @@ public static Test suite(String packageName, int iTests) {
         Class c = Class.forName(packageName + "Test" + i);
         Class [] args = new Class[] {String.class};
         Constructor ct = c.getConstructor(args);
-        String [] sa = new String [] {"test" + i};
+        Object [] sa = new Object [] {"test" + i};
         Object o = ct.newInstance(sa);
         suite.addTest((TestCase) o);
       }
