@@ -29,9 +29,10 @@ import junit.framework.TestCase;
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
 import org.adligo.i.tests.I_RunnableTest;
+import org.adligo.tests.client.I_Test;
 
 
-public class ATest extends TestCase {
+public class ATest extends TestCase implements I_Test {
   static Log log = LogFactory.getLog(ATest.class);
   private boolean bLastTestFinished = false;
   private boolean bLastOne = false;
@@ -140,4 +141,54 @@ public class ATest extends TestCase {
     return false;
 
   }
+  
+	@Override
+	public void assertIsEquals(Object a, Object b) {
+		assertEquals(a, b);
+	}
+
+	@Override
+	public void assertIsEquals(String message, Object a, Object b) {
+		assertEquals(message, a, b);
+	}
+
+	@Override
+	public void assertIsFalse(boolean p) {
+		assertFalse(p);
+	}
+
+	@Override
+	public void assertIsFalse(String message, boolean p) {
+		assertFalse(message, p);
+	}
+
+	@Override
+	public void assertIsNotNull(Object a) {
+		assertNotNull(a);
+	}
+
+	@Override
+	public void assertIsNotNull(String message, Object a) {
+		assertNotNull(message, a);
+	}
+
+	@Override
+	public void assertIsNull(Object a) {
+		assertNull(a);
+	}
+
+	@Override
+	public void assertIsNull(String message, Object a) {
+		assertNull(message, a);
+	}
+
+	@Override
+	public void assertIsTrue(boolean p) {
+		assertTrue(p);
+	}
+
+	@Override
+	public void assertIsTrue(String message, boolean p) {
+		assertTrue(message, p);
+	}
 }
