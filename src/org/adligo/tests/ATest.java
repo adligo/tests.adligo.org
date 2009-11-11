@@ -206,13 +206,17 @@ public class ATest extends TestCase implements I_Test {
 	 */
 	public static void assertCollectionEquals(Collection<?> expected, Collection<?> actual) {
 		
+		if (expected.size() == 0) {
+			TestCase.assertEquals("The expected results are empty and the actual results contain " +
+					actual, 0, actual.size());
+		}
 		Set<Object> a = new HashSet<Object>();
 		a.addAll(expected);
 		a.removeAll(actual);
 		
 		if (a.size() > 0) {
 			TestCase.assertTrue("the expected objects " + a  + " were not contained in the actual results", false);
-		}
+		} 
 		a = new HashSet<Object>();
 		a.addAll(actual);
 		a.removeAll(expected);
@@ -235,6 +239,11 @@ public class ATest extends TestCase implements I_Test {
 	 * @param actual
 	 */
 	public static void assertMapEquals(Map<?,?> expected, Map<?,?> actual) {
+		
+		if (expected.size() == 0) {
+			TestCase.assertEquals("The expected results are empty and the actual results contain " +
+					actual, 0, actual.size());
+		}
 		
 		Set<Object> a = new HashSet<Object>();
 		a.addAll(expected.keySet());
