@@ -24,6 +24,12 @@ package org.adligo.tests;
  * @version 1.0
  */
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 import junit.framework.TestCase;
 
 import org.adligo.i.log.client.Log;
@@ -190,5 +196,76 @@ public class ATest extends TestCase implements I_Test {
 	@Override
 	public void assertIsTrue(String message, boolean p) {
 		assertTrue(message, p);
+	}
+	
+	/**
+	 * tries to be intelligent and tell you which ones are missing
+	 * in the error message for junit
+	 * @param expected
+	 * @param actual
+	 */
+	public static void assertCollectionEquals(Collection<?> expected, Collection<?> actual) {
+		
+		Set<Object> a = new HashSet<Object>();
+		a.addAll(expected);
+		a.removeAll(actual);
+		
+		if (a.size() > 0) {
+			TestCase.assertTrue("the expected objects " + a  + " were not contained in the actual results", false);
+		}
+		a = new HashSet<Object>();
+		a.addAll(actual);
+		a.removeAll(expected);
+		if (a.size() > 0) {
+			TestCase.assertTrue("the actual objects contained the following extras " + a , false);
+		}
+		
+		TestCase.assertEquals(expected.size(), actual.size());
+		if (log.isDebugEnabled()) {
+			log.debug("actual objects " + actual);
+			log.debug("expected objects " + expected);
+		}
+		
+	}
+	
+	/**
+	 * tries to be intelligent and tell you which ones are missing
+	 * in the error message for junit
+	 * @param expected
+	 * @param actual
+	 */
+	public static void assertMapEquals(Map<?,?> expected, Map<?,?> actual) {
+		
+		Set<Object> a = new HashSet<Object>();
+		a.addAll(expected.keySet());
+		a.removeAll(actual.keySet());
+		
+		if (a.size() > 0) {
+			TestCase.assertTrue("the expected Map keys " + a  + " were not contained in the actual results", false);
+		}
+		a = new HashSet<Object>();
+		a.addAll(actual.keySet());
+		a.removeAll(expected.keySet());
+		if (a.size() > 0) {
+			TestCase.assertTrue("the actual Map keys contained the following extras " + a , false);
+		}
+		
+		TestCase.assertEquals("The Map sizes don't match ", 
+				expected.size(), actual.size());
+		if (log.isDebugEnabled()) {
+			log.debug("actual objects " + actual);
+			log.debug("expected objects " + expected);
+		}
+		
+		Set<?> keys = expected.keySet(); 
+		Iterator<?> it = keys.iterator();
+		while (it.hasNext()) {
+			Object key = it.next();
+			Object valExpected = expected.get(key);
+			Object valActual = actual.get(key);
+			TestCase.assertEquals("The values in the maps for key " + key + " didn't match.", 
+					valExpected, valActual);
+			
+		}
 	}
 }
