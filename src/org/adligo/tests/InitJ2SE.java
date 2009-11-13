@@ -10,7 +10,9 @@ public class InitJ2SE {
 		  if (!init) {
 			try {
 				J2SEPlatform.init();
-				LogPlatform.init();
+				if (!LogPlatform.isInit()) {
+					LogPlatform.init();
+				}
 			} catch (Exception x) {
 				x.printStackTrace();
 			}
