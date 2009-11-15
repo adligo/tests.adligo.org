@@ -8,7 +8,7 @@ import org.adligo.gwt.util.client.GwtPropertyFactory;
 import org.adligo.i.log.client.LogPlatform;
 
 public class InitGwt {
-	private static final boolean init = false;
+	private static boolean init = false;
 	  
 	  public static synchronized void init(){
 		  if (!init) {
@@ -19,6 +19,7 @@ public class InitGwt {
 				GwtTestPropertyFactory.init();
 				LogPlatform.init();
 				
+				init = true;
 			} catch (Exception x) {
 				x.printStackTrace();
 			}
