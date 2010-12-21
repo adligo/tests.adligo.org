@@ -18,7 +18,6 @@ package org.adligo.tests;
  *               So here we are go ATest go
  *
  *
- * Copyright:    Copyright (c) 2002
  * Company:
  * @author
  * @version 1.0

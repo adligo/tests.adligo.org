@@ -1,9 +1,10 @@
 package org.adligo.i.tests;
 
 /**
+ * @deprecated use I_TimedTest and TestTimeoutRunnable
+ * 
  * Title:
  * Description:
- * Copyright:    Copyright (c) 2002
  * Company:
  * @author
  * @version 1.0
