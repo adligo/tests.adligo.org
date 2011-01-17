@@ -1,7 +1,7 @@
 package org.adligo.tests;
 
 import org.adligo.i.log.client.LogPlatform;
-import org.adligo.j2se.util.J2SEPlatform;
+import org.adligo.jse.util.JSEPlatform;
 
 public class InitJ2SE {
 	 private static final boolean init = false;
@@ -9,7 +9,7 @@ public class InitJ2SE {
 	  public static synchronized void init(){
 		  if (!init) {
 			try {
-				J2SEPlatform.init();
+				JSEPlatform.init();
 				if (!LogPlatform.isInit()) {
 					LogPlatform.init();
 				}
