@@ -34,6 +34,7 @@ import junit.framework.TestCase;
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
 import org.adligo.i.tests.I_RunnableTest;
+import org.adligo.jse.util.JSECommonInit;
 import org.adligo.tests.client.I_Test;
 
 
@@ -46,7 +47,7 @@ public class ATest extends TestCase implements I_Test {
   String sTestName;
   
   static {
-		InitJ2SE.init();
+	  JSECommonInit.callLogDebug(ATest.class.getName());
   }
   
   public ATest() {

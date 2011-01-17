@@ -10,6 +10,8 @@ package org.adligo.tests;
  */
 import java.lang.reflect.Constructor;
 
+import org.adligo.jse.util.JSECommonInit;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -17,7 +19,7 @@ import junit.framework.TestSuite;
 public class Suite {
 
   static {
-		InitJ2SE.init();
+		JSECommonInit.callLogDebug(Suite.class.getName());
   }
 	  
   public Suite() {
