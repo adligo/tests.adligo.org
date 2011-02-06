@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="jar-gwt-and-j2se" name="tests">
+<project basedir="." default="jar-gwt-and-jse" name="tests">
 	<property file="build.properties" />
 	<import file="${user.home}/conf/adligo/build.xml"/>
 </project>
