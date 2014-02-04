@@ -33,12 +33,10 @@ import junit.framework.TestCase;
 
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
-import org.adligo.i.tests.I_RunnableTest;
 import org.adligo.jse.util.JSECommonInit;
-import org.adligo.tests.client.I_Test;
 
 
-public class ATest extends TestCase implements I_Test {
+public class ATest extends TestCase {
   static Log log = LogFactory.getLog(ATest.class);
   private boolean bLastTestFinished = false;
   private boolean bLastOne = false;
@@ -80,40 +78,6 @@ public class ATest extends TestCase implements I_Test {
     }
   }
 
-  public void runTests(I_RunnableTest [] tests) {
-    for (int i = 0; i < tests.length; i++) {
-      new Thread(tests[i]).run();
-    }
-    while (!areTheyAllDone(tests)) {
-      if (log.isInfoEnabled()) {
-        log.info("*WAITING For " + super.getName() + " Events to finish ");
-      }
-      bLastOne = false;
-      try {
-        Thread.sleep(500);
-      } catch (Exception x) { x.printStackTrace(); }
-    }
-    for (int i = 0; i < tests.length; i++) {
-      if (tests[i].getError() != null) {
-        this.setError(tests[i].getError());
-      }
-    }
-    if (sError != null) {
-      super.assertTrue(sError, false);
-    }
-  }
-
-  private boolean areTheyAllDone(I_RunnableTest [] tests) {
-    for (int i = 0; i < tests.length; i++) {
-      if (!tests[i].isFinished()) {
-        return false;
-      }
-    }
-    return true;
-
-  }
-
-
   public void logStart() {
     log.warn("test " + sTestName + " is starting\n\n\n\n\n");
   }
@@ -147,56 +111,6 @@ public class ATest extends TestCase implements I_Test {
     return false;
 
   }
-  
-	@Override
-	public void assertIsEquals(Object a, Object b) {
-		assertEquals(a, b);
-	}
-
-	@Override
-	public void assertIsEquals(String message, Object a, Object b) {
-		assertEquals(message, a, b);
-	}
-
-	@Override
-	public void assertIsFalse(boolean p) {
-		assertFalse(p);
-	}
-
-	@Override
-	public void assertIsFalse(String message, boolean p) {
-		assertFalse(message, p);
-	}
-
-	@Override
-	public void assertIsNotNull(Object a) {
-		assertNotNull(a);
-	}
-
-	@Override
-	public void assertIsNotNull(String message, Object a) {
-		assertNotNull(message, a);
-	}
-
-	@Override
-	public void assertIsNull(Object a) {
-		assertNull(a);
-	}
-
-	@Override
-	public void assertIsNull(String message, Object a) {
-		assertNull(message, a);
-	}
-
-	@Override
-	public void assertIsTrue(boolean p) {
-		assertTrue(p);
-	}
-
-	@Override
-	public void assertIsTrue(String message, boolean p) {
-		assertTrue(message, p);
-	}
 	
 	/**
 	 * tries to be intelligent and tell you which ones are missing
