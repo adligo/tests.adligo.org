@@ -31,8 +31,8 @@ import java.util.Set;
 
 import junit.framework.TestCase;
 
-import org.adligo.i.log.client.Log;
-import org.adligo.i.log.client.LogFactory;
+import org.adligo.i.log.shared.Log;
+import org.adligo.i.log.shared.LogFactory;
 import org.adligo.jse.util.JSECommonInit;
 
 

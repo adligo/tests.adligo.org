@@ -1,7 +1,7 @@
 package org.adligo.tests;
 
-import org.adligo.i.log.client.Log;
-import org.adligo.i.log.client.LogFactory;
+import org.adligo.i.log.shared.Log;
+import org.adligo.i.log.shared.LogFactory;
 
 /**
  * this class is used to help write a JUnit test that 
