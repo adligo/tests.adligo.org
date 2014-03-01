@@ -1,27 +1,6 @@
 package org.adligo.tests;
 
 
-/**
- * Title:
- * Description:   This is the default testing api for Adligo if you are writeing a test
- *               for the adligo code extend this class and use
- *               the methods in this class for your test assertions
- *
- *               Do not use the JUnit Asssert methods, for your assertions!
- *               The problem with these methods is that you they don't know when your
- *               events have finised occuring! Or the threads that your code may light up
- *               finish.
- *
- *               This class was written because the other multi threaded testers that I saw
- *               were relying on the fact that you were going to light up your threads inside the
- *               test, but what if the code you are testing lights up the threads?
- *               So here we are go ATest go
- *
- *
- * Company:
- * @author
- * @version 1.0
- */
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -35,7 +14,31 @@ import org.adligo.i.log.shared.Log;
 import org.adligo.i.log.shared.LogFactory;
 import org.adligo.jse.util.JSECommonInit;
 
-
+/**
+ *  Title:
+ * Description:   This is the default testing api for Adligo if you are writeing a test
+ *               for the adligo code extend this class and use
+ *               the methods in this class for your test assertions
+ *
+ *               Do not use the JUnit Asssert methods, for your assertions!
+ *               The problem with these methods is that you they don't know when your
+ *               events have finised occuring! Or the threads that your code may light up
+ *               finish.
+ *
+ *               This class was written because the other multi threaded testers that I saw
+ *               were relying on the fact that you were going to light up your threads inside the
+ *               test, but what if the code you are testing lights up the threads?
+ *               So here we are go ATest go
+ *               
+ * @deprecated NOTE this class it self is not really depricated, however it has a deprication
+ *    warning because the AAssertion class should be extended instead as it is a better
+ *    base class replacement for JUnit.
+ *    This class will be declared final in sometime by 2018 or so, and the deprication 
+ *    flag will be removed after the code base is switched over to AAssertions.
+ *    
+ * @author scott
+ *
+ */
 public class ATest extends TestCase implements I_Test {
   static Log log = LogFactory.getLog(ATest.class);
   private boolean bLastTestFinished = false;
