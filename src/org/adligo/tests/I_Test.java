@@ -38,7 +38,6 @@ package org.adligo.tests;
  *
  */
 public interface I_Test {
-
 	public void assertIsTrue(boolean p);
 	public void assertIsTrue(String message, boolean p);
 	
