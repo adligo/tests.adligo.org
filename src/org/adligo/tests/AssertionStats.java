@@ -22,7 +22,7 @@ public class AssertionStats {
 	private static final Log log = LogFactory.getLog(AssertionStats.class);
 	private static final Map<String, Integer> packageAsserts = new HashMap<String, Integer>();
 	
-	public synchronized void logAssertionStats(Class<?> testClass, String packageName, int numAssertions) {
+	public static synchronized void logAssertionStats(Class<?> testClass, String packageName, int numAssertions) {
 		if (log.isInfoEnabled()) {
 			log.info("Test class " + testClass + " had " + numAssertions + " assertions.");
 		}
