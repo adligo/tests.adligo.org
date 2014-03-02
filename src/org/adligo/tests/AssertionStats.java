@@ -28,6 +28,7 @@ public class AssertionStats {
 		}
 		Integer currentCount = packageAsserts.get(packageName);
 		if (currentCount == null) {
+			currentCount = numAssertions;
 			packageAsserts.put(packageName, numAssertions);
 		} else {
 			currentCount = currentCount + numAssertions;
