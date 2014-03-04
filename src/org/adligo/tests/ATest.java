@@ -266,6 +266,6 @@ public class ATest extends TestCase implements I_Test {
 
 	@Override
 	public void assertIsNotEquals(Object a, Object b) {
-		assertFalse(a.equals(b));
+		assertFalse("Expected the following not to be equal;\n" + a + "\n" + b, a.equals(b));
 	}
 }
