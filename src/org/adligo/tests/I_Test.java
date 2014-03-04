@@ -46,6 +46,9 @@ public interface I_Test {
 	
 	public void assertIsEquals(String message, Object a, Object b);
 	public void assertIsEquals(Object a, Object b);
+
+	public void assertIsNotSame(String message, Object a, Object b);
+	public void assertIsNotSame(Object a, Object b);
 	
 	public void assertIsNull(String message,Object a);
 	public void assertIsNull(Object a);

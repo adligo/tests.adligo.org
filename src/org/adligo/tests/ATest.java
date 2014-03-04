@@ -74,7 +74,10 @@ public class ATest extends TestCase implements I_Test {
         Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
         Thread.yield();
         Thread.sleep(2000);
-      } catch (Exception x) {}
+      } catch (InterruptedException x) {
+    	  log.error(x.getMessage(), x);
+    	  assertTrue(x.getMessage(), false);
+      }
     }
     if (sError != null) {
       super.assertTrue(sError, false);
@@ -244,5 +247,15 @@ public class ATest extends TestCase implements I_Test {
 	@Override
 	public void assertIsTrue(String message, boolean p) {
 		assertTrue(message, p);
+	}
+
+	@Override
+	public void assertIsNotSame(String message, Object a, Object b) {
+		assertNotSame(message,  a, b);
+	}
+
+	@Override
+	public void assertIsNotSame(Object a, Object b) {
+		assertNotSame(a, b);
 	}
 }
