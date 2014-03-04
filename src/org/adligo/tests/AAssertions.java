@@ -209,6 +209,160 @@ public abstract class AAssertions {
 		assertEquals(a, new Byte(b));
 	}
 	
+	public void assertNotEquals(Object a, Object b) {
+		count++;
+		test.assertIsNotEquals(a, b);
+	}
+	
+	public void assertNotEquals(String message, Object a, Object b) {
+		count++;
+		test.assertIsNotEquals(message, a, b);
+	}
+	
+	public void assertNotEquals(String message, char a, Object b) {
+		assertNotEquals(message, new Character(a), b);
+	}
+
+	public void assertNotEquals(char a, Object b) {
+		assertNotEquals(new Character(a), b);
+	}
+	
+	public void assertNotEquals(String message, char a, char b) {
+		assertNotEquals(message, new Character(a), new Character(b));
+	}
+
+	public void assertNotEquals(char a, char b) {
+		assertNotEquals(new Character(a), new Character(b));
+	}
+	
+	public void assertNotEquals(String message, Object a, char b) {
+		assertNotEquals(message, a, new Character(b));
+	}
+
+	public void assertNotEquals(Object a, char b) {
+		assertNotEquals(a, new Character(b));
+	}
+	
+	public void assertNotEquals(String message, int a, Object b) {
+		assertNotEquals(message, new Integer(a), b);
+	}
+
+	public void assertNotEquals(int a, Object b) {
+		assertNotEquals(new Integer(a), b);
+	}
+	
+	public void assertNotEquals(String message, int a, int b) {
+		assertNotEquals(message, new Integer(a), new Integer(b));
+	}
+
+	public void assertNotEquals(int a, int b) {
+		assertNotEquals(new Integer(a), new Integer(b));
+	}
+	
+	public void assertNotEquals(String message, Object a, int b) {
+		assertNotEquals(message, a, new Integer(b));
+	}
+
+	public void assertNotEquals(Object a, int b) {
+		assertNotEquals(a, new Integer(b));
+	}
+	
+	public void assertNotEquals(String message, long a, Object b) {
+		assertNotEquals(message, new Long(a), b);
+	}
+
+	public void assertNotEquals(long a, Object b) {
+		assertNotEquals(new Long(a), b);
+	}
+	
+	public void assertNotEquals(String message, long a, long b) {
+		assertNotEquals(message, new Long(a), new Long(b));
+	}
+
+	public void assertNotEquals(long a, long b) {
+		assertNotEquals(new Long(a), new Long(b));
+	}
+	
+	public void assertNotEquals(String message, Object a, long b) {
+		assertNotEquals(message, a, new Long(b));
+	}
+
+	public void assertNotEquals(Object a, long b) {
+		assertNotEquals(a, new Long(b));
+	}
+	
+	public void assertNotEquals(String message, double a, Object b) {
+		assertNotEquals(message, new Double(a), b);
+	}
+
+	public void assertNotEquals(double a, Object b) {
+		assertNotEquals(new Double(a), b);
+	}
+	
+	public void assertNotEquals(String message, double a, double b) {
+		assertNotEquals(message, new Double(a), new Double(b));
+	}
+
+	public void assertNotEquals(double a, double b) {
+		assertNotEquals(new Double(a), new Double(b));
+	}
+	
+	public void assertNotEquals(String message, Object a, double b) {
+		assertNotEquals(message, a, new Double(b));
+	}
+
+	public void assertNotEquals(Object a, double b) {
+		assertNotEquals(a, new Double(b));
+	}
+	
+	public void assertNotEquals(String message, float a, Object b) {
+		assertNotEquals(message, new Float(a), b);
+	}
+
+	public void assertNotEquals(float a, Object b) {
+		assertNotEquals(new Float(a), b);
+	}
+	
+	public void assertNotEquals(String message, float a, float b) {
+		assertNotEquals(message, new Float(a), new Float(b));
+	}
+
+	public void assertNotEquals(Object a, float b) {
+		assertNotEquals(a, new Float(b));
+	}
+	
+	public void assertNotEquals(String message, Object a, float b) {
+		assertNotEquals(message, a, new Float(b));
+	}
+
+	public void assertNotEquals(float a, float b) {
+		assertNotEquals(new Float(a), new Float(b));
+	}
+	
+	public void assertNotEquals(String message, byte a, Object b) {
+		assertNotEquals(message, new Byte(a), b);
+	}
+
+	public void assertNotEquals(byte a, Object b) {
+		assertNotEquals(new Byte(a), b);
+	}
+	
+	public void assertNotEquals(String message, byte a, byte b) {
+		assertNotEquals(message, new Byte(a), new Byte(b));
+	}
+
+	public void assertNotEquals(byte a, byte b) {
+		assertNotEquals(new Byte(a), new Byte(b));
+	}
+	
+	public void assertNotEquals(String message, Object a, byte b) {
+		assertNotEquals(message, a, new Byte(b));
+	}
+
+	public void assertNotEquals(Object a, byte b) {
+		assertNotEquals(a, new Byte(b));
+	}
+	
 	public void assertNull(Object a) {
 		count++;
 		test.assertIsNull(a);

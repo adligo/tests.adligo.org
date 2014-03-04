@@ -258,4 +258,14 @@ public class ATest extends TestCase implements I_Test {
 	public void assertIsNotSame(Object a, Object b) {
 		assertNotSame(a, b);
 	}
+
+	@Override
+	public void assertIsNotEquals(String message, Object a, Object b) {
+		assertFalse(message, a.equals(b));
+	}
+
+	@Override
+	public void assertIsNotEquals(Object a, Object b) {
+		assertFalse(a.equals(b));
+	}
 }
