@@ -65,7 +65,30 @@ public abstract class AAssertions {
 		count++;
 		test.assertIsEquals(a, b);
 	}
+	public void assertEquals(String message, char a, Object b) {
+		assertEquals(message, new Character(a), b);
+	}
 
+	public void assertEquals(char a, Object b) {
+		assertEquals(new Character(a), b);
+	}
+	
+	public void assertEquals(String message, char a, char b) {
+		assertEquals(message, new Character(a), new Character(b));
+	}
+
+	public void assertEquals(char a, char b) {
+		assertEquals(new Character(a), new Character(b));
+	}
+	
+	public void assertEquals(String message, Object a, char b) {
+		assertEquals(message, a, new Character(b));
+	}
+
+	public void assertEquals(Object a, char b) {
+		assertEquals(a, new Character(b));
+	}
+	
 	public void assertEquals(String message, int a, Object b) {
 		assertEquals(message, new Integer(a), b);
 	}
@@ -212,6 +235,30 @@ public abstract class AAssertions {
 		test.assertIsNotSame(a, b);
 	}
 
+	public void assertNotSame(String message, char a, Object b) {
+		assertNotSame(message, new Character(a), b);
+	}
+
+	public void assertNotSame(char a, Object b) {
+		assertNotSame(new Character(a), b);
+	}
+	
+	public void assertNotSame(String message, char a, char b) {
+		assertNotSame(message, new Character(a), new Character(b));
+	}
+
+	public void assertNotSame(char a, char b) {
+		assertNotSame(new Character(a), new Character(b));
+	}
+	
+	public void assertNotSame(String message, Object a, char b) {
+		assertNotSame(message, a, new Character(b));
+	}
+
+	public void assertNotSame(Object a, char b) {
+		assertNotSame(a, new Character(b));
+	}
+	
 	public void assertNotSame(String message, int a, Object b) {
 		assertNotSame(message, new Integer(a), b);
 	}
