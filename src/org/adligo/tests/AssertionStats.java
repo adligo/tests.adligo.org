@@ -36,4 +36,8 @@ public class AssertionStats {
 		}
 		log.warn("The package " + packageName + " now has " + currentCount + " assertions.");
 	}
+	
+	public static synchronized void logAssertionStats(Class<?> testClass, AAssertions asserts) {
+		logAssertionStats(testClass, asserts.getPackage(), asserts.getAssertionCount());
+	}
 }
