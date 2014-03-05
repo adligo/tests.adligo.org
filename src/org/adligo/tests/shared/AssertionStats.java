@@ -1,13 +1,11 @@
-package org.adligo.tests;
+package org.adligo.tests.shared;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.adligo.i.log.shared.Log;
 import org.adligo.i.log.shared.LogFactory;
-import org.adligo.tests.shared.AAssertions;
 
-import com.sun.org.apache.xerces.internal.impl.dv.dtd.NMTOKENDatatypeValidator;
 
 /**
  * This is just a helper class to log assertions at the test level
