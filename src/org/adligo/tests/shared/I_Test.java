@@ -1,4 +1,7 @@
-package org.adligo.tests;
+package org.adligo.tests.shared;
+
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * Note this allows you to use code to assert;
@@ -58,4 +61,6 @@ public interface I_Test {
 	
 	public void assertIsNotNull(String message,Object a);
 	public void assertIsNotNull(Object a);
+	public void assertMapItemsEquals(Map<?,?> expected, Map<?,?> actual);
+	public void assertCollectionItemsEquals(Collection<?> expected, Collection<?> actual);
 }

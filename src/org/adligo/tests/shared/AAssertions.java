@@ -1,6 +1,8 @@
-package org.adligo.tests;
+package org.adligo.tests.shared;
 
 import java.util.Collection;
+import java.util.Map;
+
 
 /**
  * this is a another abstraction of a test class 
@@ -534,6 +536,10 @@ public abstract class AAssertions {
 	}
 	
 	public void assertCollectionEquals(Collection<?> expected, Collection<?> actual) {
-		ATest.assertCollectionEquals(expected, actual);
+		test.assertCollectionItemsEquals(expected, actual);
+	}
+	
+	public void assertMapItemsEquals(Map<?,?> expected, Map<?,?> actual) {
+		test.assertMapItemsEquals(expected, actual);
 	}
 }

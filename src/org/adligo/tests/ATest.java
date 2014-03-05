@@ -13,6 +13,7 @@ import junit.framework.TestCase;
 import org.adligo.i.log.shared.Log;
 import org.adligo.i.log.shared.LogFactory;
 import org.adligo.jse.util.JSECommonInit;
+import org.adligo.tests.shared.I_Test;
 
 /**
  *  Title:
@@ -124,6 +125,10 @@ public class ATest extends TestCase implements I_Test {
 	 * @param expected
 	 * @param actual
 	 */
+  	public void assertCollectionItemsEquals(Collection<?> expected, Collection<?> actual) {
+  		ATest.assertCollectionEquals(expected, actual);
+   	}
+
 	public static void assertCollectionEquals(Collection<?> expected, Collection<?> actual) {
 		
 		if (expected.size() == 0) {
@@ -158,6 +163,10 @@ public class ATest extends TestCase implements I_Test {
 	 * @param expected
 	 * @param actual
 	 */
+	public void assertMapItemsEquals(Map<?,?> expected, Map<?,?> actual) {
+  		ATest.assertMapEquals(expected, actual);
+   	}
+	
 	public static void assertMapEquals(Map<?,?> expected, Map<?,?> actual) {
 		
 		if (expected.size() == 0) {

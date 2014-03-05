@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.adligo.i.log.shared.Log;
 import org.adligo.i.log.shared.LogFactory;
+import org.adligo.tests.shared.AAssertions;
 
 import com.sun.org.apache.xerces.internal.impl.dv.dtd.NMTOKENDatatypeValidator;
 
