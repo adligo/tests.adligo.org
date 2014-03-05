@@ -19,6 +19,7 @@ import com.sun.org.apache.xerces.internal.impl.dv.dtd.NMTOKENDatatypeValidator;
  *
  */
 public class AssertionStats {
+	private static final String ALL_OF_THE_PACKAGES_MUST_MATCH_FOR_A_ARRAY_OF_A_ASSERTIONS = "All of the packages must match for a array of AAssertions.";
 	private static final Log log = LogFactory.getLog(AssertionStats.class);
 	private static final Map<String, Integer> packageAsserts = new HashMap<String, Integer>();
 	
@@ -37,7 +38,22 @@ public class AssertionStats {
 		log.warn("The package " + packageName + " now has " + currentCount + " assertions.");
 	}
 	
-	public static synchronized void logAssertionStats(Class<?> testClass, AAssertions asserts) {
-		logAssertionStats(testClass, asserts.getPackage(), asserts.getAssertionCount());
+	public static synchronized void logAssertionStats(Class<?> testClass, AAssertions ... asserts) {
+		if (asserts.length == 1) {
+			logAssertionStats(testClass, asserts[0].getPackage(), asserts[0].getAssertionCount());
+		} else {
+			String packageName = asserts[0].getPackage();
+			int total = 0;
+			for (int i = 0; i < asserts.length; i++) {
+				AAssertions aas = asserts[i];
+				String pkg = aas.getPackage();
+				if (!packageName.equals(pkg)) {
+					throw new IllegalArgumentException(ALL_OF_THE_PACKAGES_MUST_MATCH_FOR_A_ARRAY_OF_A_ASSERTIONS);
+				}
+				total = total + aas.getAssertionCount();
+			}
+			logAssertionStats(testClass, packageName, total);
+		}
+		
 	}
 }
