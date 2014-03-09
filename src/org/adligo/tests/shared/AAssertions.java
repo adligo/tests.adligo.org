@@ -17,15 +17,6 @@ import java.util.Map;
 public abstract class AAssertions {
 	private I_Test test;
 	
-	/**
-	 * this method should return the package that these assertions are testing
-	 * ie org.adligo.models.core.shared
-	 * if your were testing org.adligo.models.core.shared.EMailAddress
-	 * @return
-	 */
-	public abstract String getPackage();
-	
-	
 	public I_Test getTest() {
 		return test;
 	}
