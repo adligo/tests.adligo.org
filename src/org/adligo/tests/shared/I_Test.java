@@ -3,6 +3,8 @@ package org.adligo.tests.shared;
 import java.util.Collection;
 import java.util.Map;
 
+import org.junit.TestClassScope;
+
 /**
  * Note this allows you to use code to assert;
  * 1) jse platform using junit 
@@ -40,7 +42,7 @@ import java.util.Map;
  * @author scott
  *
  */
-public interface I_Test {
+public interface I_Test extends TestClassScope {
 	public void assertIsTrue(boolean p);
 	public void assertIsTrue(String message, boolean p);
 	

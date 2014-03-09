@@ -40,7 +40,7 @@ import org.adligo.tests.shared.I_Test;
  * @author scott
  *
  */
-public class ATest extends TestCase implements I_Test {
+public abstract class ATest extends TestCase implements I_Test {
   static Log log = LogFactory.getLog(ATest.class);
   private boolean bLastTestFinished = false;
   private boolean bLastOne = false;

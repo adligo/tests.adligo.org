@@ -4,7 +4,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/i_log"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/i_util"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/jse_util"/>
+	<classpathentry kind="var" path="MVN_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+        <classpathentry kind="var" path="MVN_REPO/junit/junit/5.0-ADLIGO-SNAPSHOT/junit-5.0-ADLIGO-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="classes_e"/>
 </classpath>

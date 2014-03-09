@@ -16,7 +16,6 @@ import java.util.Map;
  */
 public abstract class AAssertions {
 	private I_Test test;
-	private int count = 0;
 	
 	/**
 	 * this method should return the package that these assertions are testing
@@ -26,9 +25,6 @@ public abstract class AAssertions {
 	 */
 	public abstract String getPackage();
 	
-	public int getAssertionCount() {
-		return count;
-	}
 	
 	public I_Test getTest() {
 		return test;
@@ -39,32 +35,26 @@ public abstract class AAssertions {
 	}
 
 	public void assertTrue(boolean p) {
-		count++;
 		test.assertIsTrue(p);
 	}
 
 	public void assertTrue(String message, boolean p) {
-		count++;
 		test.assertIsTrue(message, p);
 	}
 
 	public void assertFalse(boolean p) {
-		count++;
 		test.assertIsFalse(p);
 	}
 
 	public void assertFalse(String message, boolean p) {
-		count++;
 		test.assertIsFalse(message, p);
 	}
 
 	public void assertEquals(String message, Object a, Object b) {
-		count++;
 		test.assertIsEquals(message, a, b);
 	}
 
 	public void assertEquals(Object a, Object b) {
-		count++;
 		test.assertIsEquals(a, b);
 	}
 	public void assertEquals(String message, char a, Object b) {
@@ -212,12 +202,10 @@ public abstract class AAssertions {
 	}
 	
 	public void assertNotEquals(Object a, Object b) {
-		count++;
 		test.assertIsNotEquals(a, b);
 	}
 	
 	public void assertNotEquals(String message, Object a, Object b) {
-		count++;
 		test.assertIsNotEquals(message, a, b);
 	}
 	
@@ -366,28 +354,23 @@ public abstract class AAssertions {
 	}
 	
 	public void assertNull(Object a) {
-		count++;
 		test.assertIsNull(a);
 	}
 
 	public void assertNotNull(String message, Object a) {
-		count++;
 		test.assertIsNotNull(message, a);
 	}
 
 	public void assertNotNull(Object a) {
-		count++;
 		test.assertIsNotNull(a);
 	}
 	
 	
 	public void assertNotSame(String message, Object a, Object b) {
-		count++;
 		test.assertIsNotSame(message, a, b);
 	}
 
 	public void assertNotSame(Object a, Object b) {
-		count++;
 		test.assertIsNotSame(a, b);
 	}
 
