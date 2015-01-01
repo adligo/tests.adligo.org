@@ -3,3 +3,4 @@ classes_e/
 bin/
 test_failure.properties
 tests.jar
+/build/
